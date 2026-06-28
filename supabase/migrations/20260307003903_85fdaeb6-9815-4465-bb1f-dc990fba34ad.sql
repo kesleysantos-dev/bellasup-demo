@@ -1,0 +1,1 @@
+ALTER TABLE public.servicos ADD COLUMN categoria text NOT NULL DEFAULT 'unhas';

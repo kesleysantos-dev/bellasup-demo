@@ -1,0 +1,1 @@
+ALTER TABLE public.horarios_funcionamento ADD COLUMN IF NOT EXISTS blocos jsonb DEFAULT NULL;

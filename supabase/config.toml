@@ -1,0 +1,4 @@
+project_id = "rpvlaahbvsxkwugdigxm"
+
+[functions.og-share]
+verify_jwt = false

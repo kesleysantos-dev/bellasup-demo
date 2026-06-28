@@ -1,0 +1,19 @@
+{
+  "rewrites": [
+    {
+      "source": "/agendar/:slug",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": ".*([bB]ot|[wW]hats[aA]pp|[fF]acebook|[tT]witter|[lL]inked[iI]n|[sS]lack|[dD]iscord|[tT]elegram|[sS]kyper|[cC]rawler|[sS]pider).*"
+        }
+      ],
+      "destination": "/api/og-share?slug=:slug"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
