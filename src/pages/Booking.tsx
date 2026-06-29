@@ -449,10 +449,14 @@ const Booking = () => {
       expira_em: expiresAt,
       valor_historico: effectivePrice,
       duracao_historica: effectiveDuration,
-      // ENVIANDO PARA AS DUAS VERSÕES POR SEGURANÇA:
-      serviço_nome_histórico: nomeServico,
       servico_nome_historico: nomeServico
     } as any);
+
+    if (error) {
+      toast.error('Erro ao agendar: ' + error.message);
+      setSubmitting(false);
+      return;
+    }
 
     if (hasReservationPolicy) {
       setPaymentExpiresAt(new Date(expiresAt!));
